@@ -5,12 +5,12 @@ env:
     ARTIFACT_NAME: MyArtifact
 jobs:
   main:
-    runs-on: Windows-latest
+    runs-on: windows-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@V2
+        uses: actions/checkout@V1
       - name: Upload the artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v1.0.0
         with:
             name: ${{ env.ARTIFACT_NAME }}
             path: .
